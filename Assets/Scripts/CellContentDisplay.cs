@@ -3,10 +3,10 @@ using UnityEngine;
 public class CellContentDisplay : MonoBehaviour
 {
     [SerializeField]
-    private PickableObject _pickableObject;
+    private SpriteRenderer _cellSpriteRenderer;
 
     public void ChangeSprite(Sprite _sprite)
     {
-        GetComponent<SpriteRenderer>().sprite = _sprite;
+        _cellSpriteRenderer.sprite = _sprite;
     }
 }

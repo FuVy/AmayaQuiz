@@ -1263,7 +1263,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bundles:
-  - {fileID: 11400000, guid: 82dbd682223f0b242b4c90895765c1cd, type: 2}
+  - {fileID: 11400000, guid: 673d87c3e31d0794c8cabac9f61a9b0d, type: 2}
+  - {fileID: 11400000, guid: aff102726f7e44c44b773af3654e0ac9, type: 2}
   _bannedBundle: {fileID: 11400000, guid: 166aeb5da4360704d8847091a6b39de9, type: 2}
   _minimumAmount: 3
   _maximumAmount: 3

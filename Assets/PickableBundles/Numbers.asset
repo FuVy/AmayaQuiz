@@ -15,31 +15,31 @@ MonoBehaviour:
   _pickableObjects:
   - _identifier: numbers_1
     _ingameName: 1
-    _sprite: {fileID: 1422184923334757970, guid: da6ed520a8309ba45a1deedef2c2f6ea, type: 3}
+    _sprite: {fileID: -6629531029891648246, guid: cf9b00d0a903e6a419c92e0f371b0790, type: 3}
   - _identifier: numbers_2
     _ingameName: 2
-    _sprite: {fileID: 1808195818850983521, guid: da6ed520a8309ba45a1deedef2c2f6ea, type: 3}
+    _sprite: {fileID: -4217592887472625829, guid: cf9b00d0a903e6a419c92e0f371b0790, type: 3}
   - _identifier: numbers_3
     _ingameName: 3
-    _sprite: {fileID: -7900951133411543555, guid: da6ed520a8309ba45a1deedef2c2f6ea, type: 3}
+    _sprite: {fileID: -4412911677491635961, guid: cf9b00d0a903e6a419c92e0f371b0790, type: 3}
   - _identifier: numbers_4
     _ingameName: 4
-    _sprite: {fileID: 2267071060405275165, guid: da6ed520a8309ba45a1deedef2c2f6ea, type: 3}
+    _sprite: {fileID: 5108088467900000851, guid: cf9b00d0a903e6a419c92e0f371b0790, type: 3}
   - _identifier: numbers_5
     _ingameName: 5
-    _sprite: {fileID: -7398325283844340781, guid: da6ed520a8309ba45a1deedef2c2f6ea, type: 3}
+    _sprite: {fileID: -6395529614303463221, guid: cf9b00d0a903e6a419c92e0f371b0790, type: 3}
   - _identifier: numbers_6
     _ingameName: 6
-    _sprite: {fileID: -7015292045520539579, guid: da6ed520a8309ba45a1deedef2c2f6ea, type: 3}
+    _sprite: {fileID: -519400735672398794, guid: cf9b00d0a903e6a419c92e0f371b0790, type: 3}
   - _identifier: numbers_7
     _ingameName: 7
-    _sprite: {fileID: -675344402919758444, guid: da6ed520a8309ba45a1deedef2c2f6ea, type: 3}
+    _sprite: {fileID: -4417143251372694878, guid: cf9b00d0a903e6a419c92e0f371b0790, type: 3}
   - _identifier: numbers_8
     _ingameName: 8
-    _sprite: {fileID: 3547489320769246608, guid: da6ed520a8309ba45a1deedef2c2f6ea, type: 3}
+    _sprite: {fileID: 728446850243192315, guid: cf9b00d0a903e6a419c92e0f371b0790, type: 3}
   - _identifier: numbers_9
     _ingameName: 9
-    _sprite: {fileID: -1155199509967091035, guid: b2d7bed7eb7015e43a9cfe6261f6ce4a, type: 3}
+    _sprite: {fileID: -1344653293438560547, guid: cf9b00d0a903e6a419c92e0f371b0790, type: 3}
   - _identifier: numbers_10
     _ingameName: 10
-    _sprite: {fileID: 4142021021139464533, guid: dd500fe17584f42439aeced7e7e50e3c, type: 3}
+    _sprite: {fileID: 849386610096671516, guid: cf9b00d0a903e6a419c92e0f371b0790, type: 3}

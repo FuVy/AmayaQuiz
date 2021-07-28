@@ -1,31 +1,37 @@
 fileFormatVersion: 2
-guid: da6ed520a8309ba45a1deedef2c2f6ea
+guid: cf9b00d0a903e6a419c92e0f371b0790
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1422184923334757970
-    second: SD_NC_Cookies_1_0
+      213: -6629531029891648246
+    second: Numbers_0
   - first:
-      213: 1808195818850983521
-    second: SD_NC_Cookies_1_1
+      213: -4217592887472625829
+    second: Numbers_1
   - first:
-      213: -7900951133411543555
-    second: SD_NC_Cookies_1_2
+      213: -4412911677491635961
+    second: Numbers_2
   - first:
-      213: -7398325283844340781
-    second: SD_NC_Cookies_1_3
+      213: -6395529614303463221
+    second: Numbers_3
   - first:
-      213: 2267071060405275165
-    second: SD_NC_Cookies_1_4
+      213: -4417143251372694878
+    second: Numbers_4
   - first:
-      213: -7015292045520539579
-    second: SD_NC_Cookies_1_5
+      213: 728446850243192315
+    second: Numbers_5
   - first:
-      213: -675344402919758444
-    second: SD_NC_Cookies_1_6
+      213: 5108088467900000851
+    second: Numbers_6
   - first:
-      213: 3547489320769246608
-    second: SD_NC_Cookies_1_7
+      213: -519400735672398794
+    second: Numbers_7
+  - first:
+      213: -1344653293438560547
+    second: Numbers_8
+  - first:
+      213: 849386610096671516
+    second: Numbers_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -70,7 +76,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 240
+  spritePixelsToUnits: 280
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -89,7 +95,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -101,7 +107,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -113,7 +119,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -125,7 +131,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -137,7 +143,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -151,11 +157,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SD_NC_Cookies_1_0
+      name: Numbers_0
       rect:
         serializedVersion: 2
         x: 5
-        y: 623
+        y: 1647
         width: 167
         height: 396
       alignment: 0
@@ -165,18 +171,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25ec84817ad9cb310800000000000000
-      internalID: 1422184923334757970
+      spriteID: a05f0ef27ac2ff3a0800000000000000
+      internalID: -6629531029891648246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SD_NC_Cookies_1_1
+      name: Numbers_1
       rect:
         serializedVersion: 2
         x: 178
-        y: 624
+        y: 1648
         width: 277
         height: 395
       alignment: 0
@@ -186,18 +192,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16e95fa5480081910800000000000000
-      internalID: 1808195818850983521
+      spriteID: b57eaf65d991875c0800000000000000
+      internalID: -4217592887472625829
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SD_NC_Cookies_1_2
+      name: Numbers_2
       rect:
         serializedVersion: 2
         x: 460
-        y: 623
+        y: 1647
         width: 271
         height: 396
       alignment: 0
@@ -207,18 +213,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df5f8412ece2a5290800000000000000
-      internalID: -7900951133411543555
+      spriteID: 70910fdb53032c2c0800000000000000
+      internalID: -4412911677491635961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SD_NC_Cookies_1_3
+      name: Numbers_3
       rect:
         serializedVersion: 2
         x: 746
-        y: 623
+        y: 1647
         width: 273
         height: 395
       alignment: 0
@@ -228,18 +234,60 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d3caa33a5ed35990800000000000000
-      internalID: -7398325283844340781
+      spriteID: bc873f463b38e37a0800000000000000
+      internalID: -6395529614303463221
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SD_NC_Cookies_1_4
+      name: Numbers_4
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 1645
+        width: 274
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a2aaebad9723b2c0800000000000000
+      internalID: -4417143251372694878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers_5
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 1639
+        width: 270
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf56f720d86fb1a00800000000000000
+      internalID: 728446850243192315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Numbers_6
       rect:
         serializedVersion: 2
         x: 5
-        y: 224
+        y: 1248
         width: 303
         height: 395
       alignment: 0
@@ -249,18 +297,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1a46043e11467f10800000000000000
-      internalID: 2267071060405275165
+      spriteID: 35ae272d56393e640800000000000000
+      internalID: 5108088467900000851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SD_NC_Cookies_1_5
+      name: Numbers_7
       rect:
         serializedVersion: 2
         x: 313
-        y: 223
+        y: 1247
         width: 296
         height: 396
       alignment: 0
@@ -270,20 +318,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 540ff1f9d0da4ae90800000000000000
-      internalID: -7015292045520539579
+      spriteID: 63c8b2668c7bac8f0800000000000000
+      internalID: -519400735672398794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SD_NC_Cookies_1_6
+      name: Numbers_8
       rect:
         serializedVersion: 2
-        x: 623
-        y: 346
-        width: 395
-        height: 273
+        x: 647
+        y: 1239
+        width: 297
+        height: 395
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -291,20 +339,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4956beaf7d1b0a6f0800000000000000
-      internalID: -675344402919758444
+      spriteID: dd6198234f4d65de0800000000000000
+      internalID: -1344653293438560547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SD_NC_Cookies_1_7
+      name: Numbers_9
       rect:
         serializedVersion: 2
-        x: 623
-        y: 5
-        width: 394
-        height: 269
+        x: 999
+        y: 1215
+        width: 473
+        height: 395
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,8 +360,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09551f8edb63b3130800000000000000
-      internalID: 3547489320769246608
+      spriteID: c1b09c32f90a9cb00800000000000000
+      internalID: 849386610096671516
       vertices: []
       indices: 
       edges: []

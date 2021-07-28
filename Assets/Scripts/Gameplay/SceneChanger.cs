@@ -11,7 +11,8 @@ public class SceneChanger : MonoBehaviour
     }
     public void ChangeScene(float time)
     {
-        StartCoroutine(WaitBeforeChange(0, time));
+        StartCoroutine(WaitBeforeChange(SceneManager.GetActiveScene().buildIndex, time));
+        PlayerPrefs.SetString("afterRestart", "true");
     }
     public void ChangeScene()
     {

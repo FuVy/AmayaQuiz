@@ -40,7 +40,7 @@ public class ContentGenerator : MonoBehaviour
         var suitableBundle = SuitableObjects(_selectedBundle);
         if (suitableBundle.Length < 1)
         {
-            Debug.LogError("crazy?");
+            Debug.LogError("error");
             Debug.Log(suitableBundle.Length);
             return;
         }

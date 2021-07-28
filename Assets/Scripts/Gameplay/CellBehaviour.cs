@@ -32,7 +32,6 @@ public class CellBehaviour : MonoBehaviour, IInitializable
         {
             transform.localScale = Vector3.zero;
             transform.BounceIn();
-            //PlayerPrefs.SetString("alreadyInitialized", "true");
         }
         else
         {

@@ -20,21 +20,25 @@ public class Pointer : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity);
+            ShootRayAtMousePosition();
+        }
+    }
 
-            if (hit.collider != null)
+    private void ShootRayAtMousePosition()
+    {
+        Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.GetRayIntersection(ray, Mathf.Infinity);
+
+        if (hit.collider != null)
+        {
+            var cellBehaviour = hit.collider.GetComponent<CellBehaviour>();
+            if (cellBehaviour.IsAnswer())
             {
-                var cellBehaviour = hit.collider.GetComponent<CellBehaviour>();
-                if (cellBehaviour.IsAnswer())
-                {
-                    CorrectAnswer.Invoke(cellBehaviour._cell.ContainedObject);
-                }
+                CorrectAnswer.Invoke(cellBehaviour._cell.ContainedObject);
             }
         }
     }
 
-    
 }
 
 

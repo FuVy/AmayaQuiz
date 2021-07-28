@@ -43,7 +43,6 @@ public static class TweenExtension
 
     public static void Fade(this Image image, float value, float duration)
     {
-        image.DORewind();
         image.DOFade(value, duration).SetEase(Ease.InOutQuart);
     }
 
@@ -59,7 +58,6 @@ public static class TweenExtension
 
     public static void Fade(this TMPro.TMP_Text text, float value, float duration)
     {
-        text.DORewind();
         text.DOFade(value, duration).SetEase(Ease.InOutQuart);
     }
 }

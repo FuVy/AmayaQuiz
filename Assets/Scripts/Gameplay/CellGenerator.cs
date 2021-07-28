@@ -48,8 +48,14 @@ public class CellGenerator : MonoBehaviour
                 currentPosition.y -= _padding;
                 currentColumn = 0;
             }
-            yield return new WaitForSeconds(0.2f);
+            if (PlayerPrefs.GetString("alreadyInitialized") != "true")
+            {
+                yield return new WaitForSeconds(0.2f);
+            }
         }
-        
+        if (PlayerPrefs.GetString("alreadyInitialized") != "true")
+        {
+            PlayerPrefs.SetString("alreadyInitialized", "true");
+        }
     }
 }

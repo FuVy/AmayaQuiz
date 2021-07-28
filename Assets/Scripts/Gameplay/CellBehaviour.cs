@@ -28,10 +28,19 @@ public class CellBehaviour : MonoBehaviour, IInitializable
         _cell = new Cell();
         _cell.SetContainedObject(containedObject);
         _contentDisplay.ChangeSprite(_cell.Sprite);
-
+        if (PlayerPrefs.GetString("alreadyInitialized") != "true")
+        {
+            transform.localScale = Vector3.zero;
+            transform.BounceIn();
+            //PlayerPrefs.SetString("alreadyInitialized", "true");
+        }
+        else
+        {
+            _disabledColliderDuration = 0f;
+        }
         StartCoroutine(DisableCollider(_disabledColliderDuration));
-        transform.localScale = Vector3.zero;
-        transform.BounceIn();
+        
+        
     }
     private IEnumerator DisableCollider(float duration)
     {

@@ -13,24 +13,81 @@ MonoBehaviour:
   m_Name: Letters
   m_EditorClassIdentifier: 
   _pickableObjects:
-  - _identifier: A
+  - _identifier: letters_a
     _ingameName: A
     _sprite: {fileID: 4963718625464178563, guid: 0eec16284b2c71a4d9e9ddaefad8effd, type: 3}
-  - _identifier: B
+  - _identifier: letters_b
     _ingameName: B
     _sprite: {fileID: 7783457984840754399, guid: 0eec16284b2c71a4d9e9ddaefad8effd, type: 3}
-  - _identifier: C
+  - _identifier: letters_c
     _ingameName: C
     _sprite: {fileID: 3234300448368640894, guid: 0eec16284b2c71a4d9e9ddaefad8effd, type: 3}
-  - _identifier: D
+  - _identifier: letters_d
     _ingameName: D
     _sprite: {fileID: 7911670913450602933, guid: 0eec16284b2c71a4d9e9ddaefad8effd, type: 3}
-  - _identifier: E
+  - _identifier: letters_e
     _ingameName: E
     _sprite: {fileID: 4652326554734856401, guid: 0eec16284b2c71a4d9e9ddaefad8effd, type: 3}
-  - _identifier: F
+  - _identifier: letters_f
     _ingameName: F
     _sprite: {fileID: -6426668015567183463, guid: 0eec16284b2c71a4d9e9ddaefad8effd, type: 3}
-  - _identifier: G
+  - _identifier: letters_g
     _ingameName: G
     _sprite: {fileID: 216406037199867053, guid: 0eec16284b2c71a4d9e9ddaefad8effd, type: 3}
+  - _identifier: letters_h
+    _ingameName: H
+    _sprite: {fileID: -8235857483100294123, guid: 0eec16284b2c71a4d9e9ddaefad8effd, type: 3}
+  - _identifier: letters_i
+    _ingameName: I
+    _sprite: {fileID: -3541686595128163680, guid: 0eec16284b2c71a4d9e9ddaefad8effd, type: 3}
+  - _identifier: letters_j
+    _ingameName: J
+    _sprite: {fileID: -2756605603065543306, guid: 0eec16284b2c71a4d9e9ddaefad8effd, type: 3}
+  - _identifier: letters_k
+    _ingameName: K
+    _sprite: {fileID: -1127063002332224934, guid: 0eec16284b2c71a4d9e9ddaefad8effd, type: 3}
+  - _identifier: letters_l
+    _ingameName: L
+    _sprite: {fileID: -5901097786099144959, guid: 0eec16284b2c71a4d9e9ddaefad8effd, type: 3}
+  - _identifier: letters_m
+    _ingameName: M
+    _sprite: {fileID: 3295844289267200183, guid: 0eec16284b2c71a4d9e9ddaefad8effd, type: 3}
+  - _identifier: letters_n
+    _ingameName: N
+    _sprite: {fileID: 7112752472869403061, guid: 39bfa59c99a6c3140ba22e0d129140d7, type: 3}
+  - _identifier: letters_o
+    _ingameName: O
+    _sprite: {fileID: 5433449995169814141, guid: 39bfa59c99a6c3140ba22e0d129140d7, type: 3}
+  - _identifier: letters_p
+    _ingameName: P
+    _sprite: {fileID: -4252152113809563852, guid: 39bfa59c99a6c3140ba22e0d129140d7, type: 3}
+  - _identifier: letters_q
+    _ingameName: Q
+    _sprite: {fileID: -4447791616812998045, guid: 39bfa59c99a6c3140ba22e0d129140d7, type: 3}
+  - _identifier: letters_r
+    _ingameName: R
+    _sprite: {fileID: -6342808464625005154, guid: 39bfa59c99a6c3140ba22e0d129140d7, type: 3}
+  - _identifier: letters_s
+    _ingameName: S
+    _sprite: {fileID: 8083504644574312765, guid: 39bfa59c99a6c3140ba22e0d129140d7, type: 3}
+  - _identifier: letters_t
+    _ingameName: T
+    _sprite: {fileID: -4461999128152558772, guid: 39bfa59c99a6c3140ba22e0d129140d7, type: 3}
+  - _identifier: letters_u
+    _ingameName: U
+    _sprite: {fileID: 3270655726746431581, guid: 39bfa59c99a6c3140ba22e0d129140d7, type: 3}
+  - _identifier: letters_v
+    _ingameName: V
+    _sprite: {fileID: -2983290644488427326, guid: 39bfa59c99a6c3140ba22e0d129140d7, type: 3}
+  - _identifier: letters_w
+    _ingameName: W
+    _sprite: {fileID: -9165466868132007793, guid: 39bfa59c99a6c3140ba22e0d129140d7, type: 3}
+  - _identifier: letters_x
+    _ingameName: X
+    _sprite: {fileID: 4461586319009975920, guid: 39bfa59c99a6c3140ba22e0d129140d7, type: 3}
+  - _identifier: letters_y
+    _ingameName: Y
+    _sprite: {fileID: -5001085640463096552, guid: c1b9b563353824545919572bd7c23853, type: 3}
+  - _identifier: letters_z
+    _ingameName: Z
+    _sprite: {fileID: 3539555106843919260, guid: c1b9b563353824545919572bd7c23853, type: 3}

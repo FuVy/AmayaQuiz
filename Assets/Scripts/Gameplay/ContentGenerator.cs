@@ -13,25 +13,30 @@ public class ContentGenerator : MonoBehaviour
     private PickableBundle _bannedBundle;
 
     [SerializeField]
-    private int _amountToGenerate = 9;
+    private int _minimumAmount = 3, _maximumAmount = 9, _increment = 3;
 
     [SerializeField]
-    UnityEvent<string> ContentGenerated;
-
-    [SerializeField]
-    private string _correctIdentifier;
+    private UnityEvent<string> ContentGenerated;
 
     private PickableObject _correctObject;
 
     private PickableBundle _selectedBundle;
+
+    private int _amountToGenerate;
     
     private void Start()
     {
+        CalculateAmountToGenerate();
+
         CountAllObjects();
-        //var quantity = _bundles
-        //PlayerPrefs.SetString("quantity",)
         FilterBundles();
         SelectBundle();
+
+        if (_selectedBundle.PickableObjects.Length < _amountToGenerate)
+        {
+            _amountToGenerate = _selectedBundle.PickableObjects.Length;
+        }
+
         var suitableBundle = SuitableObjects(_selectedBundle);
         if (suitableBundle.Length < 1)
         {
@@ -40,15 +45,30 @@ public class ContentGenerator : MonoBehaviour
             return;
         }
         var generatedKit = GenerateKit(suitableBundle);
-        _correctIdentifier = SelectCorrectIdentifier(generatedKit);
+        var correctIdentifier = SelectCorrectIdentifier(generatedKit);
         GetComponent<CellGenerator>().GenerateCells(generatedKit);
-        PlayerPrefs.SetString("answer", _correctIdentifier);
+        PlayerPrefs.SetString("answer", correctIdentifier);
 
-        
-        
+
+
         ContentGenerated.Invoke("Find " + _correctObject.IngameName);
     }
-    
+
+    private void CalculateAmountToGenerate()
+    {
+        _amountToGenerate = PlayerPrefs.GetInt("amountToGenerate");
+        if (_amountToGenerate == 0)
+        {
+            _amountToGenerate = _minimumAmount;
+        }
+        else
+        {
+            _amountToGenerate += _increment;
+        }
+        _amountToGenerate = Mathf.Clamp(_amountToGenerate, _minimumAmount, _maximumAmount);
+        PlayerPrefs.SetInt("amountToGenerate", _amountToGenerate);
+    }
+
     private void CountAllObjects()
     {
         int totalAmount = 0;
@@ -57,8 +77,6 @@ public class ContentGenerator : MonoBehaviour
         {
             totalAmount += bundle.Quantity;
         }
-
-        Debug.Log(totalAmount);
 
         if (PlayerPrefs.GetInt("totalAmount") < totalAmount)
         {
@@ -70,7 +88,7 @@ public class ContentGenerator : MonoBehaviour
     {
         for (int i = _bundles.Count - 1; i >= 0; i--)
         {
-            if (SuitableObjects(_bundles[i]).Length < 1)
+            if (SuitableObjects(_bundles[i]).Length < 1) //|| _bundles[i].PickableObjects.Length < )
             {
                 _bundles.Remove(_bundles[i]);
             }
@@ -142,7 +160,6 @@ public class ContentGenerator : MonoBehaviour
         if (!generatedKit.Contains(suitableObject))
         {
             generatedKit[Random.Range(0, generatedKit.Count)] = suitableObject;
-            Debug.Log("Подставил" + suitableObject.Identifier);
         }
         return generatedKit.ToArray();
     }

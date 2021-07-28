@@ -9,6 +9,10 @@ public class SceneChanger : MonoBehaviour
     {
         StartCoroutine(WaitBeforeChange(id, time));
     }
+    public void ChangeScene(float time)
+    {
+        StartCoroutine(WaitBeforeChange(0, time));
+    }
     public void ChangeScene()
     {
         ChangeScene(SceneManager.GetActiveScene().buildIndex, 1.5f);
@@ -17,6 +21,7 @@ public class SceneChanger : MonoBehaviour
     IEnumerator WaitBeforeChange(int id, float time)
     {
         yield return new WaitForSeconds(time);
+        PlayerPrefs.SetString("hasCrushed", "false");
         SceneManager.LoadScene(id);
     }
 }

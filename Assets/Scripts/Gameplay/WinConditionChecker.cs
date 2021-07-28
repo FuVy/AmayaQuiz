@@ -15,11 +15,11 @@ public class WinConditionChecker : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("totalAmount") <= PlayerPrefs.GetInt("bannedAmount"))
         {
-            Debug.Log("opa");
             EndGame.Invoke();
         }
         else
         {
+
             AnotherRound.Invoke();
         }
     }

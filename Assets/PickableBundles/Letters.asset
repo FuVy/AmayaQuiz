@@ -14,14 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pickableObjects:
   - _identifier: A
+    _ingameName: A
     _sprite: {fileID: 4963718625464178563, guid: 0eec16284b2c71a4d9e9ddaefad8effd, type: 3}
   - _identifier: B
+    _ingameName: B
     _sprite: {fileID: 7783457984840754399, guid: 0eec16284b2c71a4d9e9ddaefad8effd, type: 3}
   - _identifier: C
+    _ingameName: C
     _sprite: {fileID: 3234300448368640894, guid: 0eec16284b2c71a4d9e9ddaefad8effd, type: 3}
   - _identifier: D
+    _ingameName: D
     _sprite: {fileID: 7911670913450602933, guid: 0eec16284b2c71a4d9e9ddaefad8effd, type: 3}
   - _identifier: E
-    _sprite: {fileID: -6426668015567183463, guid: 0eec16284b2c71a4d9e9ddaefad8effd, type: 3}
+    _ingameName: E
+    _sprite: {fileID: 4652326554734856401, guid: 0eec16284b2c71a4d9e9ddaefad8effd, type: 3}
   - _identifier: F
+    _ingameName: F
+    _sprite: {fileID: -6426668015567183463, guid: 0eec16284b2c71a4d9e9ddaefad8effd, type: 3}
+  - _identifier: G
+    _ingameName: G
     _sprite: {fileID: 216406037199867053, guid: 0eec16284b2c71a4d9e9ddaefad8effd, type: 3}

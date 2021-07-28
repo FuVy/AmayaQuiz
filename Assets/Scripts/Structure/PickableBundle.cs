@@ -9,4 +9,11 @@ public class PickableBundle : ScriptableObject
     private PickableObject[] _pickableObjects;
 
     public PickableObject[] PickableObjects => _pickableObjects;
+
+    public void AddObject(PickableObject objectToAdd)
+    {
+        List<PickableObject> objects = new List<PickableObject>(_pickableObjects);
+        objects.Add(objectToAdd);
+        _pickableObjects = objects.ToArray();
+    }
 }

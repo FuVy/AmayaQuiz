@@ -11,47 +11,36 @@ public class CellGenerator : MonoBehaviour
     private int _maximumColumnsAmount;
 
     [SerializeField]
-    private int _maximumObjectsAmount;
-
-    [SerializeField]
-    private PickableBundle[] _objectsBundle;
-
-    [SerializeField]
     private GameObject _cellPrefab;
 
     [SerializeField]
     private Transform _generatedCells;
-    private void Start()
+    public void GenerateCells(PickableObject[] selectedKit)
     {
-        StartCoroutine(Generate());
+        StartCoroutine(Generate(selectedKit));
     }
+    private IEnumerator Generate(PickableObject[] selectedKit)
+    { 
+        int objectsInKit = selectedKit.Length;
 
-    public IEnumerator Generate()
-    {
-        int selectedBundleId = Random.Range(0, _objectsBundle.Length); //
-
-        PickableBundle selectedBundle = _objectsBundle[selectedBundleId]; //
-
-        int objectsInBundle = selectedBundle.PickableObjects.Length; 
-
-        int rowsAmount = Mathf.CeilToInt((float)_maximumObjectsAmount / (float)_maximumColumnsAmount);
+        int rowsAmount = Mathf.CeilToInt((float)objectsInKit / (float)_maximumColumnsAmount);
 
         Vector2 currentPosition = new Vector2(0, 0);
-        Vector2 finalPosition = new Vector2();
+        Vector2 finalPosition;
 
         finalPosition.x = _padding * (_maximumColumnsAmount - 1);
         finalPosition.y = _padding * (-rowsAmount + 1);
         _generatedCells.position -= (Vector3)finalPosition / 2;
         int currentColumn = 0;
 
-        for (int i = 0; i < _maximumObjectsAmount; i++)
+        for (int i = 0; i < objectsInKit; i++)
         {
             currentColumn++;
             var generatedObject = Instantiate(_cellPrefab, (Vector3)currentPosition + _generatedCells.position, Quaternion.identity);
             generatedObject.transform.parent = _generatedCells;
             currentPosition.x += _padding;
             var cell = generatedObject.GetComponent<CellBehaviour>();
-            cell.Initialize(selectedBundle.PickableObjects[Random.Range(0, objectsInBundle)]);
+            cell.Initialize(selectedKit[i]);
 
             if (currentColumn / _maximumColumnsAmount == 1)
             {
@@ -62,11 +51,5 @@ public class CellGenerator : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
         }
         
-    }
-
-    IEnumerator WaitBeforeGenerate()
-    {
-        yield return new WaitForSeconds(1f);
-        yield return null;
     }
 }

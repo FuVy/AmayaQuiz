@@ -7,13 +7,10 @@ using UnityEngine.Events;
 public class Pointer : MonoBehaviour
 {
     [SerializeField]
-    private RightAnswerEvent RightAnswer;
+    private UnityEvent<PickableObject> CorrectAnswer;
 
-    Camera _camera;
-    private void Start()
-    {
-        
-    }
+    private Camera _camera;
+
     private void Awake()
     {
         _camera = Camera.main;
@@ -29,18 +26,15 @@ public class Pointer : MonoBehaviour
             if (hit.collider != null)
             {
                 var cellBehaviour = hit.collider.GetComponent<CellBehaviour>();
-                if (cellBehaviour.HandleInput())
+                if (cellBehaviour.IsAnswer())
                 {
-                    RightAnswer.Invoke(cellBehaviour._cell.ContainedObject);
+                    CorrectAnswer.Invoke(cellBehaviour._cell.ContainedObject);
                 }
             }
         }
     }
+
+    
 }
 
-[System.Serializable]
-public class RightAnswerEvent : UnityEvent<PickableObject>
-{
-
-}
 

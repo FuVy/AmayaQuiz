@@ -10,10 +10,17 @@ public class PickableBundle : ScriptableObject
 
     public PickableObject[] PickableObjects => _pickableObjects;
 
+    public int Quantity => _pickableObjects.Length;
+
     public void AddObject(PickableObject objectToAdd)
     {
         List<PickableObject> objects = new List<PickableObject>(_pickableObjects);
         objects.Add(objectToAdd);
         _pickableObjects = objects.ToArray();
+    }
+
+    public void Clear()
+    {
+        _pickableObjects = new PickableObject[0];
     }
 }

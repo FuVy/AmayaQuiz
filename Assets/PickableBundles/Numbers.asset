@@ -22,12 +22,6 @@ MonoBehaviour:
   - _identifier: numbers_3
     _ingameName: 3
     _sprite: {fileID: -7900951133411543555, guid: da6ed520a8309ba45a1deedef2c2f6ea, type: 3}
-  - _identifier: numbers_4
-    _ingameName: 4
-    _sprite: {fileID: 2267071060405275165, guid: da6ed520a8309ba45a1deedef2c2f6ea, type: 3}
-  - _identifier: numbers_5
-    _ingameName: 5
-    _sprite: {fileID: -7398325283844340781, guid: da6ed520a8309ba45a1deedef2c2f6ea, type: 3}
   - _identifier: numbers_6
     _ingameName: 6
     _sprite: {fileID: -7015292045520539579, guid: da6ed520a8309ba45a1deedef2c2f6ea, type: 3}

@@ -27,21 +27,56 @@ public class ContentGenerator : MonoBehaviour
     
     private void Start()
     {
-        PlayerPrefs.DeleteKey("answer");
+        CountAllObjects();
+        //var quantity = _bundles
+        //PlayerPrefs.SetString("quantity",)
+        FilterBundles();
         SelectBundle();
-        var suitableBundle = SuitableObjects();
+        var suitableBundle = SuitableObjects(_selectedBundle);
         if (suitableBundle.Length < 1)
         {
             Debug.LogError("crazy?");
+            Debug.Log(suitableBundle.Length);
             return;
         }
         var generatedKit = GenerateKit(suitableBundle);
         _correctIdentifier = SelectCorrectIdentifier(generatedKit);
         GetComponent<CellGenerator>().GenerateCells(generatedKit);
         PlayerPrefs.SetString("answer", _correctIdentifier);
+
+        
+        
         ContentGenerated.Invoke("Find " + _correctObject.IngameName);
     }
+    
+    private void CountAllObjects()
+    {
+        int totalAmount = 0;
 
+        foreach (PickableBundle bundle in _bundles)
+        {
+            totalAmount += bundle.Quantity;
+        }
+
+        Debug.Log(totalAmount);
+
+        if (PlayerPrefs.GetInt("totalAmount") < totalAmount)
+        {
+            PlayerPrefs.SetInt("totalAmount", totalAmount);
+        }
+    }
+
+    private void FilterBundles()
+    {
+        for (int i = _bundles.Count - 1; i >= 0; i--)
+        {
+            if (SuitableObjects(_bundles[i]).Length < 1)
+            {
+                _bundles.Remove(_bundles[i]);
+            }
+        }
+    }
+    
     private void SelectBundle()
     {
         _selectedBundle = _bundles[Random.Range(0, _bundles.Count)];
@@ -63,15 +98,15 @@ public class ContentGenerator : MonoBehaviour
         return selectedIdentifier;
     }
 
-    private PickableObject[] SuitableObjects()
+    private PickableObject[] SuitableObjects(PickableBundle desiredBundle)
     {
         List<PickableObject> objects = new List<PickableObject>();
         string[] bannedIdentifiers = BannedIdentifiers();
-        for (int i = 0; i < _selectedBundle.PickableObjects.Length; i++)
+        for (int i = 0; i < desiredBundle.PickableObjects.Length; i++)
         {
-            if (!bannedIdentifiers.Contains(_selectedBundle.PickableObjects[i].Identifier))
+            if (!bannedIdentifiers.Contains(desiredBundle.PickableObjects[i].Identifier))
             {
-                objects.Add(_selectedBundle.PickableObjects[i]);
+                objects.Add(desiredBundle.PickableObjects[i]);
             }
         }
         return objects.ToArray();

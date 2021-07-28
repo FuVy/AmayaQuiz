@@ -7,8 +7,14 @@ public class CellBehaviour : MonoBehaviour, IInitializable
 {
     public Cell _cell { get; private set; }
 
+    [SerializeField, Range(0f, 1.3f)]
+    private float _disabledColliderDuration = 0.7f;
+
     [SerializeField]
     private CellContentDisplay _contentDisplay;
+
+    [SerializeField]
+    private ParticlesHandler _particlesHandler;
 
     private Collider2D _collider;
 
@@ -23,7 +29,7 @@ public class CellBehaviour : MonoBehaviour, IInitializable
         _cell.SetContainedObject(containedObject);
         _contentDisplay.ChangeSprite(_cell.Sprite);
 
-        //StartCoroutine(DisableCollider(1.3f));
+        StartCoroutine(DisableCollider(_disabledColliderDuration));
         transform.localScale = Vector3.zero;
         transform.BounceIn();
     }
@@ -34,7 +40,7 @@ public class CellBehaviour : MonoBehaviour, IInitializable
         _collider.enabled = true;
     }
 
-    public bool HandleInput()
+    public bool IsAnswer()
     {
         bool correctAnswer = _cell.Identifier == PlayerPrefs.GetString("answer");
 
@@ -42,7 +48,9 @@ public class CellBehaviour : MonoBehaviour, IInitializable
         {
             _collider.enabled = false;
             _contentDisplay.transform.Bounce(1.3f, 0.7f, Ease.InOutBounce);
+            _particlesHandler.StartEmission();
             return true;
+            
         }
         else
         {

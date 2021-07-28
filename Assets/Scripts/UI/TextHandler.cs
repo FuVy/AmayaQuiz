@@ -11,4 +11,14 @@ public class TextHandler : MonoBehaviour
     {
         _text.text = text;
     }
+
+    public void FadeIn()
+    {
+        _text.FadeIn();
+    }
+
+    public void FadeOut()
+    {
+        _text.FadeOut();
+    }
 }

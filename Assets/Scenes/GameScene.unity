@@ -1267,7 +1267,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: aff102726f7e44c44b773af3654e0ac9, type: 2}
   _bannedBundle: {fileID: 11400000, guid: 166aeb5da4360704d8847091a6b39de9, type: 2}
   _minimumAmount: 3
-  _maximumAmount: 3
+  _maximumAmount: 9
   _increment: 3
   ContentGenerated:
     m_PersistentCalls:
